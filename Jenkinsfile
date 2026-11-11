@@ -15,7 +15,7 @@
 // Soil-topARgraphy: uses the Vuforia built into Unity 2018.2 (enabled for Standalone in Player
 // Settings), which only has Windows, Android, iOS and UWP players, so this project can't build
 // Linux64 or WebGL. The Windows agent needs, in UNITY_INSTALLS:
-//   2018.2.17f1:88933597c842:vuforia-ar
+//   2018.2.21f1:88933597c842:vuforia-ar
 def buildDir(String target, String buildType) {
   def projectPrefix = (env.PROJECT_DIR == '.') ? '' : "${env.PROJECT_DIR}/"
   return "${projectPrefix}Builds/${target}/${buildType}"
@@ -25,7 +25,7 @@ pipeline {
   agent none
   environment {
     // Unity version of the project (ProjectSettings/ProjectVersion.txt)
-    UNITY_VERSION = '2018.2.17f1'
+    UNITY_VERSION = '2018.2.21f1'
     // Folder of the Unity project (the one with Assets and ProjectSettings),
     // relative to the repository root. '.' when the project is at the root.
     PROJECT_DIR = '.'
